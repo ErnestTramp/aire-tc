@@ -1,0 +1,16 @@
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    min-height: fit-content;
+}
+
+.heroImg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
