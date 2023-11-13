@@ -7,14 +7,16 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 import "@/css/NavBar.css";
+import { Separator } from "./ui/separator";
 
 export default function NavBar() {
   return (
     <header>
       <div className="navInner">
-        <h1>Aire Trampoline Club</h1>
         <NavigationMenu>
-          <NavigationMenuList>
+          <h1 className="navHeader">Aire TC</h1>
+          <Separator orientation="vertical" className="h-[5vh] mr-2" />
+          <NavigationMenuList className="gap-2">
             <NavigationMenuItem>
               <Link to="/">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -26,6 +28,27 @@ export default function NavBar() {
               <Link to="/about">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   About Us
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link to="/about">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Sessions
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link to="/about">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Contact Us
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link to="/about">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Member Login
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>

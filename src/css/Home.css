@@ -1,16 +1,292 @@
 .hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
+    margin-top: 2vh;
+    width: 87%;
     min-height: fit-content;
+    position: relative;
 }
 
 .heroImg {
     width: 100%;
-    height: 100vh;
-    background-image: url(/hero.png);
+    height: 100%;
+    border-radius: 20px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top left;
+    position: relative;
+}
+
+.backgroundImage1,
+.backgroundImage2,
+.backgroundImage3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    position: absolute;
+}
+
+.arrow:hover {
+    transform: scale(2.2) translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow {
+    margin: 4vh;
+    transition: all .2s ease;
+    z-index: 11;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%) scale(2);
+    color: white;
+}
+
+.rightArrow {
+    right: 0;
+}
+
+.heroTextWrapper {
+    border-radius: 20px;
+    text-align: center;
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: brightness(60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.heroTextWrapper h2 {
+    font-size: 7.5vh;
+    pointer-events: none;
+
+}
+
+.heroTextWrapper p {
+    pointer-events: none;
+
+}
+
+.heroButtons {
+    width: 30%;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.heroButtons a {
+    width: 48%;
+    height: 100%;
+    font-size: 2vh
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    transform: scale(1.3);
+}
+
+.fullPage-2 {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7vh;
+}
+
+.cardsWrapper {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 32%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+.cardImg {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(80%);
+    transition: all .5s ease;
+
+}
+
+.card:nth-child(1) .cardImg {
+    background-position: 20%;
+}
+
+.card:nth-child(2) .cardImg {
+    background-position: right center;
+}
+
+.card:nth-child(3) .cardImg {
+    background-position: center;
+}
+
+.cardText {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1vh 1vh;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    justify-content: flex-end;
+    transition: all .5s ease;
+}
+
+.shownText,
+.hiddenText {
+    margin-left: 2.3vh;
+    margin-bottom: 3vh
+}
+
+.cardText h3 {
+    font-size: 3.3vh;
+}
+
+.cardText p {
+    opacity: .75;
+}
+
+.cardText {
+    transform: translateY(15%);
+}
+
+.cardText:hover {
+    transform: translateY(0%);
+}
+
+.card:hover .cardImg {
+    filter: brightness(50%);
+    transform: scale(1.15);
+}
+
+.fullPage-3 {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutContainer {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.aboutContentText {
+    margin-top: 4.5vh;
+    width: 50%;
+}
+
+.aboutContentText h2 {
+    font-size: 6vh;
+    letter-spacing: -0.05rem;
+    font-weight: 600;
+    margin-bottom: 2vh;
+}
+
+.aboutContentText p {
+    max-width: 85%;
+    margin-bottom: 4vh;
+}
+
+.aboutContentText a {
+    width: 35%;
+}
+
+.aboutContentImgs {
+    width: 50%;
+    height: 100%;
+}
+
+.aboutImg {
+    margin-top: 2.5vh;
+    margin-left: 25%;
+    width: 65%;
+    height: 90%;
+    border-radius: 20px;
+    background-color: rgba(179, 179, 179, 0.9);
+    transform: rotate(0deg);
+}
+
+.aboutBackground {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url(/6457.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60% center;
+    transform: rotate(-4deg);
+    box-shadow: 20px 20px 60px #9d9d9d,
+        -20px -20px 60px #ffffff;
+}
+
+.infoContainer {
+    width: 80%;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.infoContainer h2 {
+    font-size: 6vh;
+    letter-spacing: -0.05rem;
+    font-weight: 600;
+}
+
+.infoContent {
+    width: 100%;
+    display: flex;
+    margin-top: 5vh;
+    justify-content: space-evenly;
+}
+
+.tagCard {
+    width: 28%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.tagCard strong {
+    font-size: 3vh;
+}
+
+.tagCard a {
+    text-decoration: underline;
+    font-weight: 600;
 }
