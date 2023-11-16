@@ -3,19 +3,17 @@
     height: 84vh;
     display: flex;
     align-items: center;
-    flex-direction: column;
     margin-bottom: 5vh;
 }
 
 .bookHero {
-    margin-top: 1vh;
-    width: 90%;
+    width: 60%;
     display: flex;
     margin-bottom: 5vh;
 }
 
 .bookHeroText {
-    width: 60%;
+    padding: 5vh 5vh;
 }
 
 .bookHeroText h1 {
@@ -23,21 +21,18 @@
     font-weight: 600;
 }
 
-.bookForm {
-    width: 40%;
-    flex-grow: 1;
-    background: #9e9e9e;
-    box-shadow: 2px 2px 20px #989898,
-        -2px -2px 20px #a4a4a4;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bookHeroText p {
+    margin-bottom: 2vh;
 }
 
-.form {
-    width: 99%;
-    height: 99%;
-    background-color: aliceblue;
-    border-radius: 20px;
+.bookHeroText a {
+    text-decoration: underline;
+    color: rgb(0, 0, 73);
+}
+
+.bookForm {
+    height: 100%;
+    width: 50%;
+    padding: 2vh 3vh;
+    margin-right: 4vh;
 }

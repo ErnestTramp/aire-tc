@@ -14,7 +14,9 @@ export default function NavBar() {
     <header>
       <div className="navInner">
         <NavigationMenu>
-          <h1 className="navHeader">Aire TC</h1>
+          <h1 className="navHeader">
+            <Link to="/">Aire TC</Link>
+          </h1>
           <Separator orientation="vertical" className="h-[5vh] mr-2" />
           <NavigationMenuList className="gap-2">
             <NavigationMenuItem>

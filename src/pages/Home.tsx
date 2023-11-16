@@ -1,8 +1,7 @@
 import "@/css/Home.css";
 import { Button } from "@/components/ui/button";
-import { useRef, useState } from "react";
-import Lottie, { LottieRefCurrentProps } from "lottie-react";
-import animationData from "@/assets/scroll1.json";
+import { useState } from "react";
+
 import { Separator } from "@/components/ui/separator";
 import {
   BsFillArrowLeftCircleFill,
@@ -11,17 +10,11 @@ import {
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const aniRef = useRef<LottieRefCurrentProps>(null);
-  aniRef.current?.setSpeed(0.7);
-
-  const [animation, setAnimation] = useState(<p></p>);
-  window.setTimeout(() => {
-    setAnimation(
-      <Lottie lottieRef={aniRef} animationData={animationData} loop={true} />
-    );
-  }, 500);
-
-  let imageUrls = ["hero.jpg", "1100.jpg", "6457.jpg", "1102.jpg", "1316.jpg"];
+  let imageUrls = [
+    "https://i.imgur.com/RGxQhAt.jpg",
+    "https://i.imgur.com/cOBuUDb.jpg",
+    "https://i.imgur.com/MIGJYVG.jpg",
+  ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -60,31 +53,30 @@ export default function Home() {
             <h2>Aire Trampoline Club</h2>
             <p>Canterbury - Folkstone - Dover</p>
             <div className="heroButtons">
-              <Button asChild>
+              <Button variant="secondary" asChild>
                 <Link to="/book">Book Now</Link>
               </Button>
-              <Button variant="secondary" asChild>
-                <Link to="/about">Learn More</Link>
-              </Button>
             </div>
+            <Link className="heroLearn" to="/about">
+              learn more.
+            </Link>
           </div>
         </div>
-        <div className="scroll-down">{animation}</div>
       </div>
       <div className="fullPage-2">
         <div className="cardsWrapper">
           <Card
-            imageUrl="/1100.jpg"
+            imageUrl="https://i.imgur.com/MIGJYVG.jpg"
             head="Competitive Squad"
             tag="Our top performing athletes"
           />
           <Card
-            imageUrl="/1102.jpg"
+            imageUrl="https://i.imgur.com/NY2Jpw9.jpg"
             head="Recreational Sessions"
             tag="A warm intro to trampolining"
           />
           <Card
-            imageUrl="/1316.jpg"
+            imageUrl="https://i.imgur.com/xDeLms8.jpg"
             head="Adult Sessions"
             tag="Friendly social sessions"
           />
@@ -128,6 +120,8 @@ export default function Home() {
               </p>
               <Link to="/book">Learn about how you can be the next.</Link>
             </div>
+            <Separator orientation="vertical" />
+
             <div className="tagCard">
               <strong>Free taster session.</strong>
               <p>
@@ -137,6 +131,7 @@ export default function Home() {
               </p>
               <Link to="/book">Book yours now, it's free.</Link>
             </div>
+            <Separator orientation="vertical" />
             <div className="tagCard">
               <strong>Dexter Millen,</strong>
               <p>

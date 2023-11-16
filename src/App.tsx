@@ -8,7 +8,7 @@ import Book from "./pages/Book";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/aire-tc">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

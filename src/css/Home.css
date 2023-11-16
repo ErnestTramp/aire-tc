@@ -61,37 +61,40 @@
     top: 0;
     left: 0;
     z-index: 10;
+    line-height: 1.45;
 }
 
 .heroTextWrapper h2 {
-    font-size: 7.5vh;
+    font-size: 4.5vw;
     pointer-events: none;
 
 }
 
 .heroTextWrapper p {
     pointer-events: none;
-
+    font-size: 1.5vw;
+    margin-bottom: 1vh;
 }
 
 .heroButtons {
-    width: 30%;
+    width: 35%;
     margin-top: 2vh;
     display: flex;
     justify-content: space-evenly;
 }
 
 .heroButtons a {
-    width: 48%;
+    width: 50%;
     height: 100%;
-    font-size: 2vh
+    font-size: 1rem
 }
 
-.scroll-down {
+.heroLearn {
     position: absolute;
-    bottom: 5%;
-    right: 3%;
-    transform: scale(1.3);
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: underline;
 }
 
 .fullPage-2 {
@@ -160,7 +163,8 @@
 .shownText,
 .hiddenText {
     margin-left: 2.3vh;
-    margin-bottom: 3vh
+    margin-bottom: 3vh;
+    line-height: 1.2;
 }
 
 .cardText h3 {
@@ -172,11 +176,12 @@
 }
 
 .cardText {
-    transform: translateY(15%);
+    margin-top: 19%;
 }
 
 .cardText:hover {
-    transform: translateY(0%);
+    margin-top: 0;
+
 }
 
 .card:hover .cardImg {
@@ -205,8 +210,9 @@
 }
 
 .aboutContentText {
-    margin-top: 4.5vh;
+    margin-top: 10.5vh;
     width: 50%;
+    line-height: 1.3;
 }
 
 .aboutContentText h2 {
@@ -231,7 +237,7 @@
 }
 
 .aboutImg {
-    margin-top: 2.5vh;
+    margin-top: 4.5vh;
     margin-left: 25%;
     width: 65%;
     height: 90%;
@@ -244,7 +250,7 @@
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    background-image: url(/6457.jpg);
+    background-image: url("https://i.imgur.com/cOBuUDb.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 60% center;
@@ -271,7 +277,7 @@
     width: 100%;
     display: flex;
     margin-top: 5vh;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .tagCard {
