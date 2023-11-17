@@ -13,10 +13,9 @@
 }
 
 .aboutHeroTextFirst {
-    width: 70%;
-    height: 70%;
+    width: 100%;
     padding-top: 2.5vh;
-    line-height: 1.3;
+    line-height: 1.15;
 }
 
 .aboutHeroTextFirst h1 {
@@ -24,39 +23,11 @@
     font-weight: 600;
 }
 
-.community {
-    display: flex;
-    align-items: center;
-}
-
-.community svg {
-    transform: translateY(10%) scale(1.2);
-    margin-left: 1vw;
-}
-
-.driven {
-    transform: translateX(25%);
-}
-
-.progression {
-    transform: translateX(35%);
-}
-
-.aboutHeroTextSecond {
-    width: 40%;
-    font-size: 1.1vw;
-    text-transform: uppercase;
-    position: absolute;
-    top: 5%;
-    right: 3%;
-    font-weight: 600;
-    color: rgb(112, 112, 112);
-}
-
 .aboutHeroTextBottomRow {
     width: 100%;
-    height: 30%;
+    height: 60%;
     display: flex;
+    flex-direction: column;
 }
 
 .aboutHeroTextBottom {
@@ -69,21 +40,20 @@
 .aboutHeroTextBottom a {
     text-decoration: underline;
     font-size: 2vw;
-    margin-bottom: 2vh;
 }
 
 .teamInfo {
     display: flex;
-    justify-content: space-between;
     width: 100%;
+    gap: 3vw;
     flex-grow: 1;
     align-items: center;
 }
 
 .teamInfoImages {
     display: flex;
-    height: 100%;
-    width: 70%;
+    height: 70%;
+    width: 50%;
 }
 
 .teamImage1,
@@ -114,17 +84,13 @@
 }
 
 .aboutHeroTextBottom1 {
-    width: 60%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 2vh 2vh;
+    width: 70%;
 }
 
 .aboutHeroTextBottom1 p {
     max-width: 60%;
-    margin-right: 2vw;
+    margin-top: 2.5vh;
     font-size: 1vw;
 }
 
