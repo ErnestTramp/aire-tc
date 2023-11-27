@@ -231,7 +231,7 @@ export default function Sessions() {
             trampoline is equivalent to 30 on a treadmill. With a relaxed
             atmosphere and qualified coaches, our Wednesday evening sessions
             (8:30pm-9:45pm) cater to all ages and abilities. Book now for
-            only... <span className="font-bold text-[1.3vw]">£8.15</span>.
+            only... <span className="font-bold text-[3vh]">£8.15</span>.
           </p>
           <Button>Book now</Button>
         </div>

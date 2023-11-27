@@ -55,3 +55,25 @@ li {
 .padding {
     padding: 1.5vw 0vw !important;
 }
+
+@media (max-width: 768px) {
+    .sessionsHero h1 {
+        font-size: 3.5vh;
+    }
+
+    .sessionsHero p {
+        max-width: 100%;
+    }
+
+    .session h3 {
+        font-size: 3vh;
+    }
+
+    .session p {
+        max-width: 100%;
+    }
+
+    .table {
+        max-width: 100%;
+    }
+}

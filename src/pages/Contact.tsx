@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Contact() {
   return (
-    <div className="fullPage-8">
+    <div className="fullPage-11">
       <div className="contactHeader">
         <h1>Lets chat</h1>
         <p>
