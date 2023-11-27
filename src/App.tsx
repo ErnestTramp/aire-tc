@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import MobileNav from "./components/MobileNav";
 import { useEffect, useState } from "react";
+import Headroom from "react-headroom";
 
 function App() {
   const [width, setWidth] = useState<number>(window.innerWidth);
@@ -28,7 +29,7 @@ function App() {
 
   return (
     <Router basename="/aire-tc">
-      {isMobile ? <MobileNav /> : <NavBar />}
+      <Headroom>{isMobile ? <MobileNav /> : <NavBar />}</Headroom>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

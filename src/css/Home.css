@@ -337,7 +337,7 @@
     }
 
     .fullPage-2 {
-        height: 70vh;
+        height: 75vh;
     }
 
     .cardsWrapper {
@@ -354,7 +354,7 @@
     }
 
     .fullPage-3 {
-        height: 110vh;
+        height: 115vh;
     }
 
     .aboutContent {
@@ -371,19 +371,20 @@
 
     .aboutContentImgs {
         width: 100%;
+        height: 95%;
         display: flex;
         align-items: flex-end;
         justify-content: center;
     }
 
     .aboutImg {
-        margin-top: 0;
+        margin-top: 4vh;
         margin-left: 0;
     }
 
     .fullPage-10 {
         height: 120vh;
-        margin-top: 10vh;
+        margin-top: 6vh;
     }
 
     .infoContainer {
