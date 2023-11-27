@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import MobileNav from "./components/MobileNav";
 import { useEffect, useState } from "react";
 import Headroom from "react-headroom";
+import ScrollToTop from "./components/ScrollReset";
 
 function App() {
   const [width, setWidth] = useState<number>(window.innerWidth);
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <Router basename="/aire-tc">
+      <ScrollToTop />
       <Headroom>{isMobile ? <MobileNav /> : <NavBar />}</Headroom>
       <Routes>
         <Route path="/" element={<Home />} />

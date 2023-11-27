@@ -1,6 +1,6 @@
 import "@/css/Home.css";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Separator } from "@/components/ui/separator";
 import {
@@ -42,6 +42,15 @@ export default function Home() {
 
   const isMobile = width <= 768;
 
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const executeScroll = () => {
+    // Check if scrollRef.current is not null before calling scrollIntoView
+    if (scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="fullPage">
@@ -71,24 +80,25 @@ export default function Home() {
                 <Link to="/book">Book Now</Link>
               </Button>
             </div>
-            <Link className="heroLearn" to="/about">
+            <a className="heroLearn" onClick={executeScroll}>
               learn more.
-            </Link>
+            </a>
           </div>
         </div>
       </div>
-      <div className="fullPage-2">
+      <div className="fullPage-2" ref={scrollRef}>
         <div className="cardsWrapper">
-          <Card
-            imageUrl="https://i.imgur.com/MIGJYVG.jpg"
-            head="Competitive Squad"
-            tag="Our top performing athletes"
-          />
           <Card
             imageUrl="https://i.imgur.com/NY2Jpw9.jpg"
             head="Recreational Sessions"
             tag="A warm intro to trampolining"
           />
+          <Card
+            imageUrl="https://i.imgur.com/MIGJYVG.jpg"
+            head="Competitive Squad"
+            tag="Our top performing athletes"
+          />
+
           <Card
             imageUrl="https://i.imgur.com/xDeLms8.jpg"
             head="Adult Sessions"
@@ -96,7 +106,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="fullPage-3">
+      {/* <div className="fullPage-3">
         <div className="aboutContainer">
           <Separator />
           <div className="aboutContent">
@@ -120,7 +130,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="fullPage-10">
         <div className="infoContainer">
           <h2>About the club.</h2>
@@ -132,7 +142,7 @@ export default function Home() {
                 developed and trained many trampoline gymnasts throughout its
                 history.
               </p>
-              <Link to="/book">Learn about how you can be the next.</Link>
+              <Link to="/about">Learn about how you can be the next.</Link>
             </div>
             <Separator orientation={isMobile ? "horizontal" : "vertical"} />
 
@@ -153,8 +163,15 @@ export default function Home() {
                 trampoline experience. He holds a Level 4 Gymnastics Coaching
                 Qualification and was recently awarded the B.G. Award of Merit.
               </p>
-              <Link to="/book">Meet him and the rest of our team.</Link>
+              <Link to="/about">Meet him and the rest of our team.</Link>
             </div>
+          </div>
+          <div className="w-full flex justify-center mt-7">
+            <Button variant="ghost">
+              <Link to="/about" className="text-[4vh] font-normal">
+                Learn more...
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
@@ -175,7 +192,7 @@ const Card = ({ imageUrl, head, tag }: any) => (
       </div>
       <div className="hiddenText">
         <Button asChild variant="secondary">
-          <Link to="/book">Book Now</Link>
+          <Link to="/sessions">Book Now</Link>
         </Button>
       </div>
     </div>

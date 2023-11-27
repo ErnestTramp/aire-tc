@@ -23,6 +23,12 @@
 
 .sessions {
     margin-top: 4vh;
+    width: 100%;
+}
+
+.tabsWrapper {
+    width: 100%;
+
 }
 
 .session.canterbury {

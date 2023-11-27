@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/table";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "react-router-dom";
 
 export default function Sessions() {
   return (
@@ -31,193 +33,211 @@ export default function Sessions() {
         </div>
         <Separator></Separator>
         <div className="sessions">
-          <div className="session canterbury">
-            <h3>Canterbury</h3>
-            <p>
-              Most of our sessions jump at St Anselm’s Catholic School,
-              Canterbury. We have 4 Eurotramp Ultimate Trampolines and
-              associated matting. St Anselm’s Catholic Schools is the home of
-              our Competition Squads.
-            </p>
-            <Table className="table">
-              <TableCaption>
-                We offer a sibling discount of £2.00 per month from each invoice
-                as well as a 25% discount should a gymnast attend one or more
-                sessions in a week.
-              </TableCaption>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Day of the week</TableHead>
-                  <TableHead>Age Group</TableHead>
-                  <TableHead className="text-right">Times</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">Tuesday</TableCell>
-                  <TableCell>
-                    <ul className="flex flex-col gap-2">
-                      <li>Advanced Rec</li>
-                      <li>8-10 year olds</li>
-                      <li>10+ years old</li>
-                      <li>12+ years old</li>
-                    </ul>
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <ul className="flex flex-col gap-2">
-                      <li>4:00pm – 5:15pm</li>
-                      <li>5:00pm – 6:00pm</li>
-                      <li>6:00pm – 7:15pm</li>
-                      <li>7:15pm – 8:30pm</li>
-                    </ul>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Wednesday</TableCell>
-                  <TableCell>
-                    <ul className="flex flex-col gap-2">
-                      <li>5-7 year olds</li>
-                      <li>8-10 year olds</li>
-                      <li>10+ years old</li>
-                      <li>12+ years old</li>
-                    </ul>
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <ul className="flex flex-col gap-2">
-                      <li>4:00pm – 5:15pm</li>
-                      <li>5:00pm – 6:00pm</li>
-                      <li>6:00pm – 7:15pm</li>
-                      <li>7:15pm – 8:30pm</li>
-                    </ul>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Friday</TableCell>
-                  <TableCell>
-                    <ul className="flex flex-col gap-2">
-                      <li>5-7 year olds</li>
-                      <li>Advanced Rec</li>
-                      <li>10+ years old</li>
-                      <li>12+ years old</li>
-                    </ul>
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <ul className="flex flex-col gap-2">
-                      <li>4:00pm – 5:00pm</li>
-                      <li>5:00pm – 6:15pm</li>
-                      <li>6:00pm – 7:15pm</li>
-                      <li>7:15pm – 8:30pm</li>
-                    </ul>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Saturday</TableCell>
-                  <TableCell>
-                    <ul className="flex flex-col gap-2">
-                      <li>5-7 year olds</li>
-                      <li>8-10 year olds</li>
-                      <li>10+ years old</li>
-                      <li>12+ years old</li>
-                    </ul>
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <ul className="flex flex-col gap-2">
-                      <li>9:00am – 10:00am</li>
-                      <li>10:00am – 11:00am</li>
-                      <li>11:00am – 12:15pm</li>
-                      <li>12:15pm – 1:30pm</li>
-                    </ul>
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </div>
-          <Separator></Separator>
-
-          <div className="session dover">
-            <h3>Dover</h3>
-            <p>
-              Our Dover satellite club jumps at the amazing Dover District
-              Leisure Centre. We were lucky enough to have been supported by the
-              Roger De Haan Charity Trust and have 4 Eurotramp Ultimate
-              Trampolines and associated matting. Aire Trampoline Club is a Gold
-              Member Club for The Sports Trust.
-            </p>
-            <Table className="table">
-              <TableCaption>
-                We offer a sibling discount of £2.00 per month from each invoice
-                as well as a 25% discount should a gymnast attend one or more
-                sessions in a week.
-              </TableCaption>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Day of the week</TableHead>
-                  <TableHead>Age Group</TableHead>
-                  <TableHead className="text-right">Times</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">Monday</TableCell>
-                  <TableCell>
-                    <ul className="flex flex-col gap-2">
-                      <li>5-7 year olds</li>
-                      <li>8-10 year olds</li>
-                      <li>10+ years old</li>
-                      <li>12+ years old</li>
-                    </ul>
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <ul className="flex flex-col gap-2">
-                      <li>4:00pm – 5:00pm</li>
-                      <li>5:00pm – 6:00pm</li>
-                      <li>6:00pm – 7:15pm</li>
-                      <li>7:15pm – 8:30pm</li>
-                    </ul>
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </div>
-          <Separator></Separator>
-          <div className="session folkstone">
-            <h3>Sandwich</h3>
-            <p>
-              This is our second satellite club jumping at Sandwich Leisure
-              Centre, SANDWICH. We train on a Thursday evening with four
-              trampolines.
-            </p>
-            <Table className="table">
-              <TableCaption>
-                We offer a sibling discount of £2.00 per month from each invoice
-                as well as a 25% discount should a gymnast attend one or more
-                sessions in a week.
-              </TableCaption>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Day of the week</TableHead>
-                  <TableHead>Age Group</TableHead>
-                  <TableHead className="text-right">Times</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">Thursday</TableCell>
-                  <TableCell>
-                    <ul className="flex flex-col gap-2">
-                      <li>4-9 year olds</li>
-                      <li>10+ years old</li>
-                    </ul>
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <ul className="flex flex-col gap-2">
-                      <li>5:15pm – 6:15pm</li>
-                      <li>6:15pm – 7:30pm</li>
-                    </ul>
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+          <Tabs defaultValue="CT" className="tabsWrapper">
+            <TabsList>
+              <TabsTrigger value="CT">Canterbury</TabsTrigger>
+              <TabsTrigger value="DO">Dover</TabsTrigger>
+              <TabsTrigger value="SW">Sandwich</TabsTrigger>
+            </TabsList>
+            <TabsContent value="CT">
+              <div className="session canterbury">
+                <h3>Canterbury</h3>
+                <p>
+                  Most of our sessions jump at St Anselm’s Catholic School,
+                  Canterbury. We have 4 Eurotramp Ultimate Trampolines and
+                  associated matting. St Anselm’s Catholic Schools is the home
+                  of our Competition Squads.
+                </p>
+                <Table className="table">
+                  <TableCaption>
+                    We offer a sibling discount of £2.00 per month from each
+                    invoice as well as a 25% discount should a gymnast attend
+                    one or more sessions in a week.
+                  </TableCaption>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Day of the week</TableHead>
+                      <TableHead>Age Group</TableHead>
+                      <TableHead className="text-right">Times</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Tuesday</TableCell>
+                      <TableCell>
+                        <ul className="flex flex-col gap-2">
+                          <li>Advanced Rec</li>
+                          <li>8-10 year olds</li>
+                          <li>10+ years old</li>
+                          <li>12+ years old</li>
+                        </ul>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <ul className="flex flex-col gap-2">
+                          <li>4:00pm – 5:15pm</li>
+                          <li>5:00pm – 6:00pm</li>
+                          <li>6:00pm – 7:15pm</li>
+                          <li>7:15pm – 8:30pm</li>
+                        </ul>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Wednesday</TableCell>
+                      <TableCell>
+                        <ul className="flex flex-col gap-2">
+                          <li>5-7 year olds</li>
+                          <li>8-10 year olds</li>
+                          <li>10+ years old</li>
+                          <li>12+ years old</li>
+                        </ul>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <ul className="flex flex-col gap-2">
+                          <li>4:00pm – 5:15pm</li>
+                          <li>5:00pm – 6:00pm</li>
+                          <li>6:00pm – 7:15pm</li>
+                          <li>7:15pm – 8:30pm</li>
+                        </ul>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Friday</TableCell>
+                      <TableCell>
+                        <ul className="flex flex-col gap-2">
+                          <li>5-7 year olds</li>
+                          <li>Advanced Rec</li>
+                          <li>10+ years old</li>
+                          <li>12+ years old</li>
+                        </ul>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <ul className="flex flex-col gap-2">
+                          <li>4:00pm – 5:00pm</li>
+                          <li>5:00pm – 6:15pm</li>
+                          <li>6:00pm – 7:15pm</li>
+                          <li>7:15pm – 8:30pm</li>
+                        </ul>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Saturday</TableCell>
+                      <TableCell>
+                        <ul className="flex flex-col gap-2">
+                          <li>5-7 year olds</li>
+                          <li>8-10 year olds</li>
+                          <li>10+ years old</li>
+                          <li>12+ years old</li>
+                        </ul>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <ul className="flex flex-col gap-2">
+                          <li>9:00am – 10:00am</li>
+                          <li>10:00am – 11:00am</li>
+                          <li>11:00am – 12:15pm</li>
+                          <li>12:15pm – 1:30pm</li>
+                        </ul>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+            </TabsContent>
+            <TabsContent value="DO">
+              <div className="session dover">
+                <h3>Dover</h3>
+                <p>
+                  Our Dover satellite club jumps at the amazing Dover District
+                  Leisure Centre. We were lucky enough to have been supported by
+                  the Roger De Haan Charity Trust and have 4 Eurotramp Ultimate
+                  Trampolines and associated matting. Aire Trampoline Club is a
+                  Gold Member Club for The Sports Trust.
+                </p>
+                <Table className="table">
+                  <TableCaption>
+                    We offer a sibling discount of £2.00 per month from each
+                    invoice as well as a 25% discount should a gymnast attend
+                    one or more sessions in a week.
+                  </TableCaption>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Day of the week</TableHead>
+                      <TableHead>Age Group</TableHead>
+                      <TableHead className="text-right">Times</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Monday</TableCell>
+                      <TableCell>
+                        <ul className="flex flex-col gap-2">
+                          <li>5-7 year olds</li>
+                          <li>8-10 year olds</li>
+                          <li>10+ years old</li>
+                          <li>12+ years old</li>
+                        </ul>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <ul className="flex flex-col gap-2">
+                          <li>4:00pm – 5:00pm</li>
+                          <li>5:00pm – 6:00pm</li>
+                          <li>6:00pm – 7:15pm</li>
+                          <li>7:15pm – 8:30pm</li>
+                        </ul>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+            </TabsContent>
+            <TabsContent value="SW">
+              <div className="session folkstone">
+                <h3>Sandwich</h3>
+                <p>
+                  This is our second satellite club jumping at Sandwich Leisure
+                  Centre, SANDWICH. We train on a Thursday evening with four
+                  trampolines.
+                </p>
+                <Table className="table">
+                  <TableCaption>
+                    We offer a sibling discount of £2.00 per month from each
+                    invoice as well as a 25% discount should a gymnast attend
+                    one or more sessions in a week.
+                  </TableCaption>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Day of the week</TableHead>
+                      <TableHead>Age Group</TableHead>
+                      <TableHead className="text-right">Times</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Thursday</TableCell>
+                      <TableCell>
+                        <ul className="flex flex-col gap-2">
+                          <li>4-9 year olds</li>
+                          <li>10+ years old</li>
+                        </ul>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <ul className="flex flex-col gap-2">
+                          <li>5:15pm – 6:15pm</li>
+                          <li>6:15pm – 7:30pm</li>
+                        </ul>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+            </TabsContent>
+          </Tabs>
+          <div className="mb-10 flex w-full gap-2">
+            <Button className="w-[20%]">
+              <Link to="/book">Book Now</Link>
+            </Button>
+            <Button className="w-[10%]" variant="outline">
+              <Link to="/about">Learn More</Link>
+            </Button>
           </div>
         </div>
         <Separator></Separator>
