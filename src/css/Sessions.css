@@ -1,0 +1,57 @@
+.fullPage-8 {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.sessionsHero {
+    padding: 2.5vw 0vw;
+    width: 100%;
+}
+
+.sessionsHero h1 {
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.sessionsHero p {
+    margin-bottom: 2vh;
+    max-width: 70%;
+}
+
+.sessions {
+    margin-top: 4vh;
+}
+
+.session.canterbury {
+    margin-top: 0 !important;
+}
+
+.session {
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.session h3 {
+    font-size: 2vw;
+}
+
+.session p {
+    max-width: 70%;
+    margin-bottom: 3vh;
+}
+
+.table {
+    max-width: 70%;
+}
+
+li {
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+.padding {
+    padding: 1.5vw 0vw !important;
+}

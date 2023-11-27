@@ -1,66 +1,59 @@
+.fullPage-7 {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15vh;
+}
+
 .aboutHero {
     width: 90%;
     height: 100%;
     display: flex;
-    justify-content: center;
-}
-
-.aboutHeroText {
-    width: 95%;
-    display: flex;
-    position: relative;
     flex-direction: column;
-}
-
-.aboutHeroTextFirst {
-    width: 100%;
-    padding-top: 2.5vh;
+    align-items: center;
+    margin-top: 3vh;
     line-height: 1.15;
 }
 
-.aboutHeroTextFirst h1 {
-    font-size: 3.5vw;
+.aboutHero h1 {
+    font-size: 4vw;
     font-weight: 600;
+    letter-spacing: -0.01rem;
+    padding-bottom: 3vh;
 }
 
-.aboutHeroTextBottomRow {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
+.aboutHero p {
+    max-width: 50%;
+    text-align: center;
 }
 
-.aboutHeroTextBottom {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.aboutHeroTextBottom a {
-    text-decoration: underline;
-    font-size: 2vw;
-}
-
-.teamInfo {
-    display: flex;
-    width: 100%;
-    gap: 3vw;
+.meetUs {
+    width: 30%;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    margin-top: 5vh;
 }
 
-.teamInfoImages {
+.meetUs a {
+    font-size: 1.8vw;
+    margin-bottom: 2vh;
+}
+
+.meetUsImages {
+    width: 100%;
+    height: 14vh;
     display: flex;
-    height: 70%;
-    width: 50%;
+    justify-content: space-between;
 }
 
 .teamImage1,
 .teamImage2,
 .teamImage3,
 .teamImage4 {
-    width: 25%;
+    width: 24%;
     height: 100%;
     background-position: center;
     background-size: cover;
@@ -102,45 +95,32 @@
 }
 
 .fullPage-5 {
-    width: 100%;
-    height: 60vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoCards {
+    padding: 3vw 0vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 3vw;
 }
 
-.textRow {
-    display: flex;
-    width: 100%;
-    height: 40%;
-    padding: 0vh 4vw;
-}
-
-.textRow:nth-child(1) {
-    align-items: flex-end;
-}
-
-
-.textItem {
-    width: 28%;
-}
-
-.textItem h2 {
-    font-size: 2vw;
+.infoCards h2 {
+    font-size: 1.8vw;
     font-weight: 600;
-    letter-spacing: -0.05rem;
 }
 
-.textItem.first {
-    margin-left: 25%;
-}
-
-.textItem.second {
-    margin-left: 25%;
-}
-
-.textItem.fourth {
-    margin-left: 20%;
+.showCase {
+    width: 40%;
+    height: 30vw;
+    background-image: url(/1316.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
 }
 
 .fullPage-6 {
@@ -164,4 +144,56 @@
     font-size: 1.3vw;
     text-align: justify;
     letter-spacing: -0.02rem;
+}
+
+@media (max-width: 768px) {
+    .fullPage-7 {
+        height: 38vh;
+    }
+
+    .aboutHero h1 {
+        font-size: 4.5vh;
+        text-align: center;
+    }
+
+    .aboutHero p {
+        max-width: 90%;
+    }
+
+    .meetUs {
+        width: 90%;
+    }
+
+    .meetUs a {
+        font-size: 2.5vh;
+    }
+
+    .meetUsImages {
+        height: 10vh;
+    }
+
+    .fullPage-5 {
+        flex-direction: column;
+    }
+
+    .infoCards {
+        text-align: center;
+        gap: 3vh;
+    }
+
+    .infoCards h2 {
+        font-size: 3vh;
+    }
+
+    .showCase {
+        display: none;
+    }
+
+    .storyWrapper {
+        width: 80%;
+    }
+
+    .storyWrapper p {
+        font-size: 2vh;
+    }
 }

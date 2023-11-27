@@ -259,6 +259,13 @@
         -20px -20px 60px #ffffff;
 }
 
+.fullPage-10 {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+}
+
 .infoContainer {
     width: 80%;
     margin-top: 4vh;
@@ -295,4 +302,101 @@
 .tagCard a {
     text-decoration: underline;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .fullPage {
+        height: 32vh;
+    }
+
+    .hero {
+        max-height: 30vh;
+    }
+
+    .heroImg svg {
+        display: none;
+    }
+
+    .heroTextWrapper h2 {
+        font-size: 3.5vh;
+        font-weight: 600;
+    }
+
+    .heroTextWrapper p {
+        font-size: 1.7vh;
+        margin-bottom: 0;
+    }
+
+    .heroButtons {
+        width: 70%;
+        margin-top: 1.5vh;
+    }
+
+    .heroLearn {
+        display: none;
+    }
+
+    .fullPage-2 {
+        height: 70vh;
+    }
+
+    .cardsWrapper {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        height: 32%;
+    }
+
+    .cardText {
+        margin-top: 25%;
+    }
+
+    .fullPage-3 {
+        height: 110vh;
+    }
+
+    .aboutContent {
+        flex-direction: column;
+    }
+
+    .aboutContentText {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutContentImgs {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .aboutImg {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .fullPage-10 {
+        height: 120vh;
+        margin-top: 10vh;
+    }
+
+    .infoContainer {
+        text-align: center;
+    }
+
+    .infoContent {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .tagCard {
+        width: 100%;
+        height: auto;
+    }
 }

@@ -34,21 +34,21 @@ export default function NavBar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/about">
+              <Link to="/sessions">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Sessions
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/about">
+              <Link to="/contact">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Contact Us
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/about">
+              <Link to="/login">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Member Login
                 </NavigationMenuLink>

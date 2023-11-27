@@ -1,6 +1,6 @@
 import "@/css/Home.css";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Separator } from "@/components/ui/separator";
 import {
@@ -27,6 +27,20 @@ export default function Home() {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
     }
   };
+
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
 
   return (
     <>
@@ -107,7 +121,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="fullPage-3">
+      <div className="fullPage-10">
         <div className="infoContainer">
           <h2>About the club.</h2>
           <div className="infoContent">
@@ -120,7 +134,7 @@ export default function Home() {
               </p>
               <Link to="/book">Learn about how you can be the next.</Link>
             </div>
-            <Separator orientation="vertical" />
+            <Separator orientation={isMobile ? "horizontal" : "vertical"} />
 
             <div className="tagCard">
               <strong>Free taster session.</strong>
@@ -131,7 +145,7 @@ export default function Home() {
               </p>
               <Link to="/book">Book yours now, it's free.</Link>
             </div>
-            <Separator orientation="vertical" />
+            <Separator orientation={isMobile ? "horizontal" : "vertical"} />
             <div className="tagCard">
               <strong>Dexter Millen,</strong>
               <p>

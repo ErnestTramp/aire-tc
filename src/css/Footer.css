@@ -21,3 +21,21 @@ footer p {
 .socials svg {
     transform: scale(2);
 }
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 10vh;
+        height: 20vh;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4vh;
+    }
+
+    footer p {
+        margin-left: 0;
+    }
+
+    .socials {
+        margin-right: 0;
+    }
+}
